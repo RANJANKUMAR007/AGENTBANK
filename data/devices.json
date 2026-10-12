@@ -1,0 +1,57 @@
+[
+  {
+    "device_id": "DEV_PRIYA_IPHONE",
+    "customer_id": "CUST_001",
+    "device_name": "iPhone 15 Pro",
+    "os": "iOS 18.0",
+    "ip_address": "103.21.244.12",
+    "location": "Bengaluru, India",
+    "trusted": true,
+    "first_seen": "2024-01-10T10:00:00Z",
+    "last_seen": "2026-10-11T12:30:00Z"
+  },
+  {
+    "device_id": "DEV_PRIYA_MACBOOK",
+    "customer_id": "CUST_001",
+    "device_name": "MacBook Air M2",
+    "os": "macOS 15.1",
+    "ip_address": "103.21.244.15",
+    "location": "Bengaluru, India",
+    "trusted": true,
+    "first_seen": "2024-03-01T08:30:00Z",
+    "last_seen": "2026-10-10T17:40:00Z"
+  },
+  {
+    "device_id": "DEV_ARJUN_PIXEL",
+    "customer_id": "CUST_002",
+    "device_name": "Google Pixel 8",
+    "os": "Android 15",
+    "ip_address": "157.34.12.80",
+    "location": "Ahmedabad, India",
+    "trusted": true,
+    "first_seen": "2024-05-12T14:10:00Z",
+    "last_seen": "2026-10-11T09:15:00Z"
+  },
+  {
+    "device_id": "DEV_ARJUN_UNKNOWN_WIN",
+    "customer_id": "CUST_002",
+    "device_name": "Unknown Windows PC",
+    "os": "Windows 11",
+    "ip_address": "185.220.101.5",
+    "location": "Bucharest, Romania",
+    "trusted": false,
+    "first_seen": "2026-10-10T22:45:00Z",
+    "last_seen": "2026-10-10T22:45:00Z"
+  },
+  {
+    "device_id": "DEV_MEERA_SAMSUNG",
+    "customer_id": "CUST_003",
+    "device_name": "Samsung Galaxy S22",
+    "os": "Android 14",
+    "ip_address": "182.73.110.45",
+    "location": "Chennai, India",
+    "trusted": true,
+    "first_seen": "2023-11-20T11:00:00Z",
+    "last_seen": "2026-10-11T08:00:00Z"
+  }
+]

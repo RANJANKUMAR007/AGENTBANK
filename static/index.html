@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgentBank - Multi-Agent Banking Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="brand">
+      <div class="logo-badge">AGENTBANK</div>
+      <div class="brand-title">Multi-Agent Banking Simulation</div>
+    </div>
+    <div class="header-controls">
+      <div class="customer-switch">
+        <label for="customerSelect">Customer:</label>
+        <select id="customerSelect">
+          <option value="CUST_001">Priya Sharma (Prime / Anomaly Demo)</option>
+          <option value="CUST_002">Arjun Patel (Active / Velocity Demo)</option>
+          <option value="CUST_003">Meera Iyer (Low Credit / Loan Reject Demo)</option>
+        </select>
+        <button id="btnGenerateCustomer" class="btn-secondary" title="Create a realistic synthetic customer with ~30 transactions">+ Generate Customer</button>
+        <div class="lookup-box">
+          <input type="text" id="lookupIdInput" placeholder="Lookup ID (e.g. CUST_002)" />
+          <button id="btnLookupCustomer" class="btn-icon">🔍</button>
+        </div>
+      </div>
+      
+      <!-- Profile Badge Chip -->
+      <div id="customerProfileChip" class="profile-chip" title="Active Customer Financial Profile">
+        <span id="chipName" class="chip-name">Priya Sharma</span>
+        <span id="chipScore" class="chip-badge badge-info">CIBIL: 780</span>
+        <span id="chipKyc" class="chip-badge badge-success">KYC: VERIFIED</span>
+      </div>
+
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span id="systemStatus">Ready (Orchestrator Active)</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Two-Pane Layout -->
+  <div class="main-layout">
+    
+    <!-- Left Pane: Chat UI -->
+    <section class="chat-pane">
+      <!-- Customer Tab Bar & Conversation Controls -->
+      <div class="chat-customer-bar">
+        <div class="customer-tabs-scroll" id="customerTabsBar">
+          <!-- Populated dynamically via JS -->
+        </div>
+        <button id="btnClearChat" class="btn-clear-chat" title="Clear conversation for active customer">
+          <span>🗑️ Clear this chat</span>
+        </button>
+      </div>
+
+      <!-- Quick Prompt Chips -->
+      <div class="quick-prompts">
+        <span style="font-size: 11px; font-weight: 600; color: #64748b; text-transform: uppercase;">Quick Demos:</span>
+        <button class="prompt-chip" data-prompt="What's my balance?">Account Balance</button>
+        <button class="prompt-chip" data-prompt="Show my last 5 transactions">Recent Transactions</button>
+        <button class="prompt-chip" data-prompt="I don't recognize the $2,400 charge from yesterday, is it fraud?">Fraud Investigation</button>
+        <button class="prompt-chip" data-prompt="Can I get a 5 lakh personal loan? What would my EMI be?">Loan Eligibility & EMI</button>
+        <button class="prompt-chip" data-prompt="Check if my last big transaction is suspicious and tell me whether it affects my loan eligibility">Multi-Agent Combo</button>
+        <button class="prompt-chip" data-prompt="Show me Arjun's transactions">Guardrail (Cross-Customer)</button>
+        <button class="prompt-chip" data-prompt="What is EMI?">General: What is EMI?</button>
+        <button class="prompt-chip" data-prompt="loan?">Vague: "loan?" (Clarify)</button>
+        <button class="prompt-chip" data-prompt="Give me a summary of my profile">Customer 360</button>
+      </div>
+
+      <!-- Messages Stream -->
+      <div class="messages-container" id="messagesContainer">
+        <!-- Initial Welcome Message -->
+        <div class="message-row assistant">
+          <div class="avatar bot-avatar">AB</div>
+          <div class="bubble">
+Hello Priya! Welcome to AgentBank.
+I am your banking assistant powered by a coordinated multi-agent system. I can assist you with:
+- Checking account balances & statements
+- Investigating unrecognized or suspicious charges
+- Real-time loan eligibility checks & EMI calculation
+- Complete 360° financial profile reviews
+
+How can I help you today?
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input Area -->
+      <div class="chat-input-area">
+        <form class="chat-input-form" id="chatForm">
+          <input 
+            type="text" 
+            id="userInput" 
+            placeholder="Type your banking question or select a demo prompt above..." 
+            autocomplete="off" 
+            required 
+          />
+          <button type="submit" class="btn-send" id="btnSend">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Right Pane: Live Agent Trace -->
+    <aside class="trace-pane">
+      <div class="trace-header">
+        <div class="trace-title">
+          <span>Agent Execution Trace</span>
+        </div>
+        <div id="traceIdBadge" style="font-size: 11px; color: #64748b; font-family: monospace;">Trace: Idle</div>
+      </div>
+
+      <div class="trace-content" id="traceContent">
+        <div class="empty-trace" id="emptyTrace">
+          <div class="empty-trace-icon">⚡</div>
+          <div style="font-weight: 600; margin-bottom: 4px;">Live Orchestration Visibility</div>
+          <div style="font-size: 13px;">Send a message or click a demo chip on the left to watch the AI Gateway guardrails, Supervisor decomposition, specialist agents, and deterministic tool calls execute in real time.</div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+[
+  {
+    "customer_id": "CUST_001",
+    "name": "Priya Sharma",
+    "email": "priya.sharma@example.com",
+    "phone": "+91-98765-43210",
+    "address": "402 Palm Heights, Indiranagar, Bengaluru",
+    "kyc_status": "VERIFIED",
+    "monthly_income": 125000,
+    "existing_emi": 15000,
+    "credit_score": 780,
+    "accounts": [
+      {
+        "account_number": "ACC_PRIYA_01",
+        "type": "SAVINGS",
+        "currency": "INR",
+        "balance": 245000.50,
+        "status": "ACTIVE"
+      },
+      {
+        "account_number": "ACC_PRIYA_02",
+        "type": "SALARY",
+        "currency": "INR",
+        "balance": 52000.00,
+        "status": "ACTIVE"
+      }
+    ],
+    "cards": [
+      {
+        "card_number": "4111-2222-3333-8821",
+        "type": "CREDIT",
+        "status": "ACTIVE",
+        "daily_limit": 100000
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_002",
+    "name": "Arjun Patel",
+    "email": "arjun.patel@example.com",
+    "phone": "+91-98220-11223",
+    "address": "12 Shanti Niketan, Ellisbridge, Ahmedabad",
+    "kyc_status": "VERIFIED",
+    "monthly_income": 85000,
+    "existing_emi": 8000,
+    "credit_score": 720,
+    "accounts": [
+      {
+        "account_number": "ACC_ARJUN_01",
+        "type": "SAVINGS",
+        "currency": "INR",
+        "balance": 89400.00,
+        "status": "ACTIVE"
+      }
+    ],
+    "cards": [
+      {
+        "card_number": "5241-7788-9900-3490",
+        "type": "DEBIT",
+        "status": "ACTIVE",
+        "daily_limit": 75000
+      }
+    ]
+  },
+  {
+    "customer_id": "CUST_003",
+    "name": "Meera Iyer",
+    "email": "meera.iyer@example.com",
+    "phone": "+91-97112-99887",
+    "address": "8B Orchid Towers, Adyar, Chennai",
+    "kyc_status": "VERIFIED",
+    "monthly_income": 45000,
+    "existing_emi": 21000,
+    "credit_score": 610,
+    "accounts": [
+      {
+        "account_number": "ACC_MEERA_01",
+        "type": "SAVINGS",
+        "currency": "INR",
+        "balance": 18200.25,
+        "status": "ACTIVE"
+      }
+    ],
+    "cards": [
+      {
+        "card_number": "4532-6677-1122-9014",
+        "type": "CREDIT",
+        "status": "ACTIVE",
+        "daily_limit": 30000
+      }
+    ]
+  }
+]

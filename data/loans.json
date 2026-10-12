@@ -1,0 +1,26 @@
+[
+  {
+    "loan_id": "LN_MEERA_PERSONAL_01",
+    "customer_id": "CUST_003",
+    "product": "Personal Loan",
+    "principal": 500000,
+    "outstanding_balance": 340000,
+    "interest_rate": 14.5,
+    "monthly_emi": 21000,
+    "tenure_months": 36,
+    "remaining_months": 20,
+    "status": "ACTIVE"
+  },
+  {
+    "loan_id": "LN_PRIYA_AUTO_01",
+    "customer_id": "CUST_001",
+    "product": "Car Loan",
+    "principal": 800000,
+    "outstanding_balance": 210000,
+    "interest_rate": 8.75,
+    "monthly_emi": 15000,
+    "tenure_months": 60,
+    "remaining_months": 16,
+    "status": "ACTIVE"
+  }
+]
